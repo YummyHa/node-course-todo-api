@@ -103,6 +103,7 @@ describe('GET /todos/:id', () => {
   });
 });
 
+// Test delete
 describe('DELETE /todos/:id', () => {
   var hexId = todos[0]._id.toHexString();
 
