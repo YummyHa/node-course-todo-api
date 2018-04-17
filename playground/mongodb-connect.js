@@ -6,10 +6,10 @@ MongoClient.connect('mongodb://localhost:27017', (err, client) => {
         return console.log('Unable to connect to MongoDB Server');
     }
     console.log('Connected to MongoDB Server');
-
+    
     // client.db('TodoApp').collection('Todos').insertOne({
-    //     text: 'Something to do',
-    //     completed: false
+        //     text: 'Something to do',
+        //     completed: false
     // }, (err, result) => {
     //     if (err) {
     //         return console.log('Unable to insert todo', err);
