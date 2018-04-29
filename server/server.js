@@ -1,4 +1,4 @@
-require('./config/config');
+  require('./config/config');
 
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -45,8 +45,8 @@ app.get('/todos/:id', (req, res) => {
   }
 
   Todo.findById(id).then((todo) => {
-    if (!todo) { 
-      return res.status(404).send(); 
+    if (!todo) {
+      return res.status(404).send();
     }
 
     res.send({ todo });
@@ -61,7 +61,7 @@ app.delete('/todos/:id', (req, res) => {
 
   // validate the id -> not valid? return 404
   if (!ObjectID.isValid(id)) {
-    return res.status(404).send(); 
+    return res.status(404).send();
   }
 
   // remove todo by id
@@ -82,7 +82,7 @@ app.patch('/todos/:id', (req, res) => {
   var body = _.pick(req.body, ['text', 'completed']);
 
   if (!ObjectID.isValid(id)) {
-    return res.status(404).send(); 
+    return res.status(404).send();
   }
 
   if (_.isBoolean(body.completed) && body.completed) {
